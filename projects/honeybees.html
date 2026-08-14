@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honeybee Swarm Dynamics — Jay Hall</title>
+<meta name="description" content="Case study: tracking honeybee swarm flight paths to understand collective decision-making without a central controller.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark"></span> JAY HALL</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#workbench">Workbench</a></li>
+      <li><a href="../index.html#archive">Archive</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../resume.html">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <header class="proj-hero wrap">
+    <div class="eyebrow">Specimen A / Research</div>
+    <h1>Honeybee Swarm Dynamics</h1>
+    <p class="dek">How does a swarm organize itself without a central controller?</p>
+    <div class="proj-meta">
+      <div>Institution<b>CU Boulder</b></div>
+      <div>Year<b>2026</b></div>
+      <div>Methods<b>Computer Vision, Tracking</b></div>
+      <div>Tools<b>Python · OpenCV · NumPy</b></div>
+    </div>
+  </header>
+
+  <div class="wrap proj-body">
+
+    <div class="proj-figure bracketed">Hero image or video of the swarm — add media<span class="bx1"></span><span class="bx2"></span></div>
+    <p class="fig-caption"><b>FIG. 01</b> — Swarm cluster, field recording</p>
+
+    <h2>The question</h2>
+    <p>A honeybee swarm makes high-stakes decisions — where to build a new nest — with no individual bee holding the full picture. Scout bees survey candidate sites independently and report back through a waggle dance, and somehow the group converges on a single choice. I wanted to understand the mechanics behind that convergence: how local, individual signals turn into a coordinated group outcome.</p>
+
+    <h2>The experiment</h2>
+    <p>I set up a multi-camera rig to record swarm activity and built a tracking pipeline to extract individual flight trajectories from raw video. The setup needed to handle dense, fast-moving clusters of near-identical insects — which meant a lot of the actual engineering work was in calibration, lighting, and separating real bee motion from camera noise.</p>
+
+    <div class="proj-figure bracketed">Camera rig / calibration setup — add photo<span class="bx1"></span><span class="bx2"></span></div>
+    <p class="fig-caption"><b>FIG. 02</b> — Camera rig and calibration target</p>
+
+    <h2>The data</h2>
+    <p>Once trajectories were extracted, I looked at flight path density over time to see how consensus emerged spatially — whether agreement built up gradually or shifted suddenly once a threshold of scouts favored one site.</p>
+
+    <div class="proj-figure bracketed">Trajectory density plot — add graph<span class="bx1"></span><span class="bx2"></span></div>
+    <p class="fig-caption"><b>FIG. 03</b> — Flight-path density over time</p>
+
+    <h2>The model</h2>
+    <p>I'm working through a simplified agent-based model that treats each bee as following a small set of local rules, to see how much of the swarm's collective behavior can be reproduced without any agent having global information.</p>
+
+    <h2>What I learned</h2>
+    <p>Individually simple behavior, tracked carefully, gives away a lot about group-level intelligence. A large part of this project turned out to be about tooling — getting clean, high-resolution tracking data was harder than the modeling that came after it.</p>
+
+    <h2>What's next</h2>
+    <p>Extending the camera rig to stereo tracking for real 3D flight paths, and comparing the agent-based model's output against the recorded consensus timelines.</p>
+
+  </div>
+
+  <div class="wrap proj-nav">
+    <a class="btn ghost" href="../index.html#work">← Back to work</a>
+    <a class="btn ghost" href="#">Next: ThermoBloom →</a>
+  </div>
+</main>
+
+<footer class="wrap">
+  <p class="cta">Let's make something.</p>
+  <div class="contact-links">
+    <a href="mailto:jay@example.com">Email</a>
+    <a href="https://github.com/">GitHub ↗</a>
+    <a href="https://linkedin.com/">LinkedIn ↗</a>
+  </div>
+  <p class="fine">© <span id="year"></span> Jay Hall.</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
